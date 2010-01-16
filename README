@@ -2,10 +2,18 @@ GoForth
 =======
 
 I got really interested in Forth and thus I began making a parser, of sorts, in
-Go. The initial stages are kinda silly, only being able to do basic math and 
-printing, but I'll add lookup tables and functions soon enough. Though I don't 
-intend for it to catch on, it's still a nifty piece of code and can easily be
-disected if you want some Forth in your code. 
+Go. Though I don't intend for it to catch on, it's still a nifty piece of code 
+and can easily be disected if you want some Forth in your code. 
+
+Currently Supports:
+	. .S 0SP + - * / DUP ?DUP 2DUP PICK TUCK NIP 
+	DROP 2DROP OVER 2OVER SWAP 2SWAP 2SWAP ROT -ROT  
+	( comments ) 
+	
+I added a "t" command that checks if the popped value is greater then the DataStack
+length so that if you need to make sure that you have at least 2 numbers on the 
+stack, you can call " 2 t " and it will tell you there's not enough, and then 
+crash and burn, as per Go.
 
 Enjoy!
 --

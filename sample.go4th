@@ -20,4 +20,6 @@
  
  17 5 / . 
  
- 1 2 t 2DUP .S ( it will never get to .S ) 
+ ( 1 2 t 2DUP .S ( it will never get to .S ) 
+ 
+ 72 EMIT 105 EMIT 

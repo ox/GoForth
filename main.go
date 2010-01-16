@@ -163,6 +163,8 @@ func parse_forth(dat string, DataStack *vector.Vector) {
 		case "2SWAP":
 			DataStack.Swap(L - 4, L - 2);
 			DataStack.Swap(L - 3, L - 1);
+		case "EMIT":
+			log.Stdout( string([]byte{uint8(DataStack.Last().(float))}) );
 		default:
 			val, ok := strconv.Atof(dat);
 			

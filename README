@@ -1,0 +1,12 @@
+GoForth
+=======
+
+I got really interested in Forth and thus I began making a parser, of sorts, in
+Go. The initial stages are kinda silly, only being able to do basic math and 
+printing, but I'll add lookup tables and functions soon enough. Though I don't 
+intend for it to catch on, it's still a nifty piece of code and can easily be
+disected if you want some Forth in your code. 
+
+Enjoy!
+--
+Artem Titoulenko

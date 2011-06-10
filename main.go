@@ -47,9 +47,26 @@ func main() {
 				comment = false;
 			}
 		}
-		
-	} 
-	
+	} else {
+		buf := bufio.NewReader(os.Stdin)
+
+		for {
+			fmt.Print("> ");
+			read, err : buf.ReadString('\n')
+			if err != nil {
+				println()
+				break
+			}
+
+			line := read[0: len(read)-1];
+			if len(line) == 0 {
+				continue
+			}
+
+			parse_forth(line, DataStack)
+		}
+	}
+}
 	/*
 	Experimental, session type operation (think python shell)
 	
@@ -63,7 +80,7 @@ func main() {
 			parse_forth(dat[0:len(dat)-1], DataStack);
 			}
 	}
-	/**/}
+	/**/
 
 func check_stack_size( DataStack *vector.Vector, required int) bool {
 	if DataStack.Len() < required {
